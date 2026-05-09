@@ -9,13 +9,13 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@ant-design/icons-vue": "catalog:frontend",
+    "@antdv-next/icons": "catalog:frontend",
     "@mylib/directives": "workspace:*",
     "@mylib/hooks": "workspace:*",
     "@mylib/typescript-config": "workspace:*",
     "@mylib/ui": "workspace:*",
     "@mylib/utils": "workspace:*",
-    "ant-design-vue": "catalog:frontend",
+    "antdv-next": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend"
   },

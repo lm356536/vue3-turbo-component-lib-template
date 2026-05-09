@@ -39,7 +39,7 @@ const handleClick = (event: MouseEvent) => {
 };
 </script>
 
-<!-- <style src="./Button.scss"></style> 这种写法 gulp + rollup 打包会报错，vite 打包不会，所以采用以下都兼容的写法：-->
+<!-- <style src="./Button.scss"></style> 这种外链写法在部分库构建器里不稳定，所以保留内联 @use 写法让样式跟随组件入口被收集。-->
 <style lang="scss">
 @use './Button.scss' as *;
 </style>

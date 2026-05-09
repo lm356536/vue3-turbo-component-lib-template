@@ -10,7 +10,7 @@
  * 类似于：/// <reference types="vite/client" /> 具体可参考playground下的env.d.ts
  */
 declare module 'vue' {
-  // GlobalComponents for Volar
+  // 给 Volar 提供全局组件类型提示，避免全局注册后模板中丢失类型。
   export interface GlobalComponents {
     VButton: (typeof import('@mylib/ui'))['VButton'];
     VDialog: (typeof import('@mylib/ui'))['VDialog'];

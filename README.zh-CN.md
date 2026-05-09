@@ -22,7 +22,7 @@
 </p>
 
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.5-42b883?style=flat-square&logo=vue.js&logoColor=white)](https://v3.vuejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Turborepo](https://img.shields.io/badge/Turborepo-%23000000?style=flat-square&logo=turborepo&logoColor=white)](https://turbo.build/)
 [![pnpm](https://img.shields.io/badge/pnpm-%23F69220?style=flat-square&logo=pnpm&logoColor=white)](https://pnpm.io/)
 [![License](https://img.shields.io/github/license/huangmingfu/vue3-turbo-component-lib-template?style=flat-square)](LICENSE)
@@ -31,7 +31,7 @@
 
 ## ✨ 核心特性
 
-- 🚀 **最新技术栈** - 基于 Vue 3.5 + TypeScript 5+，享受最新特性
+- 🚀 **最新技术栈** - 基于 Vue 3.5 + TypeScript 6，享受最新特性
 - 📦 **Monorepo 架构** - 使用 Turborepo 管理多个包，提升代码复用率
 - 🚫 **强制 pnpm** - 解决幽灵依赖问题，节省磁盘空间，提升安装速度
 - 🎨 **完整规范配置** - 集成 ESLint、Prettier、Stylelint、Commitlint 等代码规范
@@ -41,7 +41,9 @@
 - 🛠️ **丰富工具集** - 内置常用 Hooks、工具函数和指令
 - 🔄 **热更新支持** - 开发时实时预览，提升开发效率
 - 🔧 **一键重命名** - 快速将 @mylib 替换为你的自定义包名
-- ⚡️ **多种构建方式** - 支持 Gulp 统一构建或各包独立构建
+- ⚡️ **快速库构建** - 使用 Rolldown 构建基础包，使用 tsdown 构建 UI 包
+- 🧩 **可选聚合构建** - 保留 `build:gulp`，可将所有库包统一输出到根目录 `dist`
+- 🧪 **新版演练场依赖** - playground 使用 antdv-next 和 @antdv-next/icons
 - 📝 **版本管理** - 使用 Changeset 管理多包版本和发布流程
 
 ## 📁 项目结构
@@ -49,6 +51,7 @@
 ```
 ├── apps/
 │   └── docs/           # 组件库文档，基于 VitePress
+├── build/              # Gulp 聚合构建入口，基于 Rolldown 和 tsdown
 ├── packages/
 │   ├── ui/             # UI 组件库
 │   ├── hooks/          # 自定义 Hooks
@@ -56,7 +59,6 @@
 │   ├── utils/          # 工具函数库
 │   └── lint-configs/   # 代码规范配置
 ├── playground/         # 组件演示环境
-├── build/              # 统一构建脚本
 └── scripts/            # 辅助脚本
 ```
 
@@ -97,7 +99,7 @@ pnpm dev:play         # 启动演练场
 # 构建相关
 pnpm build            # 构建所有包
 pnpm build:docs       # 构建文档应用
-pnpm build:gulp       # 使用 gulp 统一打包
+pnpm build:gulp       # 聚合构建所有库包到根目录 dist，可作为发布产物组织方案
 
 # 测试相关
 pnpm test             # 测试所有包
@@ -119,12 +121,12 @@ pnpm generate:component # 生成新组件
 
 ### 相比其他组件库模板的优势：
 
-1. **技术前沿** - 基于最新版本的 Vue 3.5 和 TypeScript 5+，始终与技术发展同步
+1. **技术前沿** - 基于最新版本的 Vue 3.5 和 TypeScript 6，始终与技术发展同步
 2. **开箱即用** - 预配置完整的开发工具链，无需额外配置即可开始开发
 3. **灵活架构** - Monorepo 结构便于管理多个包，同时保持各模块的独立性
 4. **企业级规范** - 集成完整的代码规范和提交规范，保证代码质量
 5. **文档完善** - 内置文档系统，支持国际化，便于组件文档编写
-6. **多种构建方式** - 支持统一构建和独立构建，适应不同团队需求
+6. **快速构建链路** - 基础包使用 Rolldown，UI 包使用 tsdown，聚合产物由 `build:gulp` 统一编排
 7. **易于定制** - 提供一键重命名脚本，快速定制为自己的组件库
 
 ## 📸 效果预览
@@ -151,6 +153,9 @@ pnpm generate:component # 生成新组件
 - [Turborepo](https://turbo.build/repo) - 高性能的 Monorepo 构建系统
 - [VitePress](https://vitepress.dev/) - 基于 Vite 的静态站点生成器
 - [Vite](https://vitejs.dev/) - 新一代前端构建工具
+- [Rolldown](https://rolldown.rs/) - 高性能 JavaScript/TypeScript 打包器
+- [tsdown](https://tsdown.dev/) - 基于 Rolldown 的 TypeScript 库构建工具
+- [antdv-next](https://github.com/antdv-next/antdv-next) - playground 使用的 Vue 组件库
 - [pnpm](https://pnpm.io/) - 快速、节省磁盘空间的包管理器
 - [ESLint](https://eslint.org/) - JavaScript/TypeScript 代码质量检查工具
 - [Prettier](https://prettier.io/) - 代码格式化工具
@@ -209,6 +214,10 @@ pnpm generate:component
 pnpm run build
 pnpm run dev
 ```
+
+### 5. `pnpm build` 和 `pnpm build:gulp` 有什么区别？
+
+`pnpm build` 使用 Turborepo 调度各包自己的构建任务，产物保留在每个包的 `dist` 目录中。`pnpm build:gulp` 走 `build/gulpfile.ts`，会把 `ui`、`utils`、`hooks`、`directives` 聚合输出到根目录 `dist/<包名>`，适合需要统一收集库包产物的场景。
 
 ## 🤝 贡献指南
 

@@ -22,7 +22,7 @@
 </p>
 
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.5-42b883?style=flat-square&logo=vue.js&logoColor=white)](https://v3.vuejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Turborepo](https://img.shields.io/badge/Turborepo-%23000000?style=flat-square&logo=turborepo&logoColor=white)](https://turbo.build/)
 [![pnpm](https://img.shields.io/badge/pnpm-%23F69220?style=flat-square&logo=pnpm&logoColor=white)](https://pnpm.io/)
 [![License](https://img.shields.io/github/license/huangmingfu/vue3-turbo-component-lib-template?style=flat-square)](LICENSE)
@@ -31,7 +31,7 @@ A modern component library template based on `Turborepo + Vue 3.5 + TypeScript`,
 
 ## ✨ Key Features
 
-- 🚀 **Cutting-edge Tech Stack** - Built on Vue 3.5 + TypeScript 5+, enjoy the latest features
+- 🚀 **Cutting-edge Tech Stack** - Built on Vue 3.5 + TypeScript 6, enjoy the latest features
 - 📦 **Monorepo Architecture** - Managed with Turborepo for multiple packages, improving code reusability
 - 🚫 **Enforced pnpm** - Resolves phantom dependencies, saves disk space, improves installation speed
 - 🎨 **Complete Standards** - Integrated ESLint, Prettier, Stylelint, Commitlint and other code standards
@@ -41,7 +41,9 @@ A modern component library template based on `Turborepo + Vue 3.5 + TypeScript`,
 - 🛠️ **Rich Toolset** - Built-in common Hooks, utility functions and directives
 - 🔄 **HMR Support** - Real-time preview during development, boosts productivity
 - 🔧 **One-click Renaming** - Quickly replace @mylib with your custom package name
-- ⚡️ **Multiple Build Modes** - Supports unified build with Gulp or individual package builds
+- ⚡️ **Fast Library Builds** - Uses Rolldown for base packages and tsdown for the UI package
+- 🧩 **Optional Aggregate Build** - Keeps `build:gulp` for collecting all library outputs under root `dist`
+- 🧪 **Modern Playground Dependency** - Uses antdv-next and @antdv-next/icons in playground
 - 📝 **Version Management** - Uses Changeset for multi-package versioning and release workflow
 
 ## 📁 Project Structure
@@ -49,6 +51,7 @@ A modern component library template based on `Turborepo + Vue 3.5 + TypeScript`,
 ```
 ├── apps/
 │   └── docs/           # Component library documentation based on VitePress
+├── build/              # Gulp aggregate build entry powered by Rolldown and tsdown
 ├── packages/
 │   ├── ui/             # UI component library
 │   ├── hooks/          # Custom Hooks
@@ -56,7 +59,6 @@ A modern component library template based on `Turborepo + Vue 3.5 + TypeScript`,
 │   ├── utils/          # Utility functions
 │   └── lint-configs/   # Code standard configurations
 ├── playground/         # Component demo environment
-├── build/              # Unified build scripts
 └── scripts/            # Helper scripts
 ```
 
@@ -97,7 +99,7 @@ pnpm dev:play         # Start playground
 # Building
 pnpm build            # Build all packages
 pnpm build:docs       # Build documentation application
-pnpm build:gulp       # Unified build with gulp
+pnpm build:gulp       # Aggregate library packages into root dist for unified output collection
 
 # Testing
 pnpm test             # Test all packages
@@ -119,12 +121,12 @@ pnpm generate:component # Generate new component
 
 ### Advantages over other component library templates:
 
-1. **Cutting-edge Technology** - Based on the latest Vue 3.5 and TypeScript 5+, always in sync with technological development
+1. **Cutting-edge Technology** - Based on the latest Vue 3.5 and TypeScript 6, always in sync with technological development
 2. **Ready to Use** - Pre-configured complete development toolchain, start developing without additional setup
 3. **Flexible Architecture** - Monorepo structure for managing multiple packages while maintaining module independence
 4. **Enterprise-grade Standards** - Integrated complete code and commit standards to ensure code quality
 5. **Comprehensive Documentation** - Built-in documentation system with internationalization support
-6. **Multiple Build Options** - Supports both unified and independent builds to meet different team needs
+6. **Fast Build Pipeline** - Base packages use Rolldown, the UI package uses tsdown, and `build:gulp` aggregates library outputs
 7. **Easy Customization** - One-click renaming script to quickly customize to your own component library
 
 ## 📸 Preview
@@ -151,6 +153,9 @@ pnpm generate:component # Generate new component
 - [Turborepo](https://turbo.build/repo) - High-performance Monorepo build system
 - [VitePress](https://vitepress.dev/) - Vite-powered static site generator
 - [Vite](https://vitejs.dev/) - Next-generation frontend build tool
+- [Rolldown](https://rolldown.rs/) - High-performance JavaScript/TypeScript bundler
+- [tsdown](https://tsdown.dev/) - TypeScript library bundler powered by Rolldown
+- [antdv-next](https://github.com/antdv-next/antdv-next) - Vue component library used by playground
 - [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager
 - [ESLint](https://eslint.org/) - JavaScript/TypeScript code quality tool
 - [Prettier](https://prettier.io/) - Code formatter
@@ -209,6 +214,10 @@ If `pnpm run dev` fails, first execute the build command:
 pnpm run build
 pnpm run dev
 ```
+
+### 5. What is the difference between `pnpm build` and `pnpm build:gulp`?
+
+`pnpm build` uses Turborepo to run each package's own build task and keeps output in each package's `dist` directory. `pnpm build:gulp` runs `build/gulpfile.ts` and aggregates `ui`, `utils`, `hooks`, and `directives` into root `dist/<package>`, which is useful when you want one collected library output directory.
 
 ## 🤝 Contributing
 

@@ -33,7 +33,7 @@
 import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { routes } from '@/router';
-import type { MenuProps } from 'ant-design-vue';
+import type { MenuProps } from 'antdv-next';
 
 const collapsed = ref<boolean>(false);
 const selectedKeys = ref<string[]>(['/ui']);

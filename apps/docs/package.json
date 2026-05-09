@@ -23,6 +23,7 @@
   "devDependencies": {
     "sass": "catalog:dev",
     "typescript": "catalog:types",
+    "oxc-minify": "catalog:build",
     "vitepress": "catalog:build",
     "vitepress-demo-plugin": "catalog:build"
   }

@@ -24,7 +24,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "rimraf dist && vite build",
+    "build": "rimraf dist && tsdown",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
@@ -34,18 +34,20 @@
   },
   "devDependencies": {
     "@mylib/typescript-config": "workspace:*",
+    "@tsdown/css": "catalog:build",
     "@types/node": "catalog:types",
     "@vitejs/plugin-vue": "catalog:build",
-    "@vitejs/plugin-vue-jsx": "catalog:build",
     "@vitest/ui": "catalog:test",
     "@vue/test-utils": "catalog:test",
     "happy-dom": "catalog:test",
     "sass": "catalog:dev",
+    "tsdown": "catalog:build",
     "typescript": "catalog:types",
+    "unplugin-vue": "catalog:build",
     "vite": "catalog:build",
-    "vite-plugin-dts": "catalog:build",
     "vitest": "catalog:test",
-    "vue": "catalog:frontend"
+    "vue": "catalog:frontend",
+    "vue-tsc": "catalog:build"
   },
   "peerDependencies": {
     "vue": "catalog:frontend"

@@ -6,7 +6,7 @@
 
 ### 环境要求
 
-- Node.js >= 20
+- Node.js >= 20，推荐使用 Node.js 22.18+ 或 24+ 以匹配最新构建工具链
 - pnpm >= 9
 
 ### 本地开发
@@ -148,12 +148,11 @@ pnpm dev:docs
 # 构建所有包
 pnpm build
 
-# 使用 gulp 统一构建
+# 聚合构建所有库包到根目录 dist，适合统一收集发布产物
 pnpm build:gulp
-
-# 分析构建产物
-pnpm build:analyze
 ```
+
+`pnpm build` 会通过 Turborepo 调度各包自身构建任务；`pnpm build:gulp` 会执行 `build/gulpfile.ts`，将 `ui`、`utils`、`hooks`、`directives` 聚合输出到根目录 `dist/<包名>`。
 
 ### 版本管理
 

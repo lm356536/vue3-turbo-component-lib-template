@@ -2,9 +2,9 @@ import { createApp } from 'vue';
 
 import App from './App.vue';
 import router from './router';
-// 引入antdv
-import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/reset.css';
+// 引入 antdv-next，playground 只依赖维护更活跃的新包名。
+import Antd from 'antdv-next';
+import 'antdv-next/dist/reset.css';
 // 引入@mylib/ui
 import MyLibUI from '@mylib/ui';
 import '@mylib/ui/style.css';

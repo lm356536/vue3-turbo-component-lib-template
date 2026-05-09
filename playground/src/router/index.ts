@@ -4,7 +4,7 @@ import {
   ExperimentOutlined,
   SettingOutlined,
   ToolOutlined,
-} from '@ant-design/icons-vue';
+} from '@antdv-next/icons';
 
 export const routes: RouteRecordRaw[] = [
   {

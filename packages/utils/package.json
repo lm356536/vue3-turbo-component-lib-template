@@ -13,15 +13,14 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "rimraf dist && rollup -c rollup.config.mjs",
+    "build": "rimraf dist && rolldown -c rolldown.config.ts",
     "clean": "rimraf .turbo node_modules dist",
     "publish": "pnpm publish"
   },
   "devDependencies": {
     "@mylib/typescript-config": "workspace:*",
-    "@rollup/plugin-json": "catalog:build",
-    "rollup": "catalog:build",
-    "rollup-plugin-dts": "catalog:build",
-    "rollup-plugin-esbuild": "catalog:build"
+    "rolldown": "catalog:build",
+    "rolldown-plugin-dts": "catalog:build",
+    "typescript": "catalog:types"
   }
 }

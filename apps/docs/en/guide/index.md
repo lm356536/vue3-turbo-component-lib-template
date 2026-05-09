@@ -9,6 +9,15 @@ mylib-template is a component library and toolkit template project based on Vue3
 - Hooks: Provides reusable composable functions
 - Directives: Offers commonly used directives
 
+## Build Modes
+
+The project provides two build entries:
+
+- `pnpm build`: uses Turborepo to run each package's own build task and keeps output in each package's `dist` directory.
+- `pnpm build:gulp`: runs `build/gulpfile.ts` to aggregate `ui`, `utils`, `hooks`, and `directives` into root `dist/<package>`.
+
+Base packages are built with Rolldown, the UI package is built with tsdown, and build configuration files use TypeScript.
+
 ## Installation
 
 Install using a package manager:

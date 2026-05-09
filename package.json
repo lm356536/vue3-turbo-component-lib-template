@@ -19,7 +19,7 @@
     "turborepo",
     "monorepo",
     "vue3 typescript",
-    "vite6",
+    "vite8",
     "turbo"
   ],
   "scripts": {
@@ -28,7 +28,7 @@
     "dev:play": "pnpm -F @mylib/playground run dev",
     "build": "turbo run build",
     "build:docs": "pnpm -F @mylib/docs run build",
-    "build:gulp": "gulp -f build/gulpfile.js",
+    "build:gulp": "gulp -f build/gulpfile.ts",
     "test": "turbo run test",
     "test:ui": "pnpm -F @mylib/ui run test:ui",
     "test:coverage": "turbo run test:coverage",
@@ -59,20 +59,29 @@
     "@mylib/typescript-config": "workspace:*",
     "@mylib/ui": "workspace:*",
     "@mylib/utils": "workspace:*",
+    "@emnapi/core": "catalog:build",
+    "@emnapi/runtime": "catalog:build",
+    "esbuild": "catalog:build",
+    "esbuild-register": "catalog:build",
     "eslint": "catalog:lint",
+    "gulp": "catalog:build",
     "husky": "catalog:lint",
     "lint-staged": "catalog:lint",
     "prettier": "catalog:lint",
-    "rollup": "catalog:build",
+    "rolldown": "catalog:build",
+    "rolldown-plugin-dts": "catalog:build",
     "stylelint": "catalog:lint",
+    "tsdown": "catalog:build",
     "turbo": "catalog:build",
     "typescript": "catalog:types",
+    "unplugin-vue": "catalog:build",
     "vue": "catalog:frontend",
+    "vue-tsc": "catalog:build",
     "rimraf": "catalog:dev"
   },
   "engines": {
-    "node": ">=20",
-    "pnpm": ">=9"
+    "node": ">=22",
+    "pnpm": ">=10"
   },
   "pnpm": {
     "peerDependencyRules": {

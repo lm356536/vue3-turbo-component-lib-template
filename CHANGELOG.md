@@ -14,7 +14,6 @@
 - **@mylib/commitlint-config:** Commitlint 配置
 - **@mylib/playground:** 演练场
 - **@mylib/docs:** 文档
-- **@mylib/build:** Gulp 打包配置
 
 <!-- ### Features 新增 -->
 <!-- ### Bug Fixes 修复 -->

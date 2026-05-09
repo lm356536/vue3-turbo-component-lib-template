@@ -16,6 +16,6 @@ export default defineConfig({
     port: 4444,
   },
   optimizeDeps: {
-    include: ['vue', 'ant-design-vue'],
+    include: ['vue', 'antdv-next'],
   },
 });
