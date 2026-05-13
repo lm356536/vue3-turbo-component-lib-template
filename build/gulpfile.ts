@@ -1,8 +1,7 @@
 import { rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { OutputOptions, RolldownOptions } from 'rolldown';
-import { rolldown } from 'rolldown';
+import { type OutputOptions, type RolldownOptions, rolldown } from 'rolldown';
 import { dts } from 'rolldown-plugin-dts';
 import Vue from 'unplugin-vue/rolldown';
 
