@@ -29,6 +29,8 @@
 
 A modern component library template based on `Turborepo + Vue 3.5 + TypeScript`, using Monorepo architecture to manage multiple packages with pre-configured code standards and development toolchain. This template helps developers focus on component development without dealing with complicated underlying configurations, quickly building their own enterprise-level component library.
 
+> Version note: the current main branch is the latest v2 line. The v1 line is kept on the [`v1`](https://github.com/huangmingfu/vue3-turbo-component-lib-template/tree/v1) branch. This v2 label belongs to the template project itself, while the four example library packages stay at `1.0.0` so users can rename the template and maintain their own initial package versions.
+
 ## ✨ Key Features
 
 - 🚀 **Cutting-edge Tech Stack** - Built on Vue 3.5 + TypeScript 6, enjoy the latest features

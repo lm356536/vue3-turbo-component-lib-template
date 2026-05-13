@@ -29,6 +29,8 @@
 
 这是一个基于 `Turborepo + Vue 3.5 + TypeScript` 的现代化组件库模板，采用 Monorepo 架构管理多个包，预配置了完整的代码规范和开发工具链。该模板旨在帮助开发者专注于组件开发，而无需处理繁琐的底层配置，快速构建属于自己的企业级组件库。
 
+> 版本说明：当前主分支是最新 v2 版本；v1 版本已保留在 [`v1`](https://github.com/huangmingfu/vue3-turbo-component-lib-template/tree/v1) 分支。
+
 ## ✨ 核心特性
 
 - 🚀 **最新技术栈** - 基于 Vue 3.5 + TypeScript 6，享受最新特性
