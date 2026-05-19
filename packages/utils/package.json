@@ -1,6 +1,6 @@
 {
-  "name": "@mylib/utils",
-  "description": "@mylib utils library",
+  "name": "@lmlib/utils",
+  "description": "@lmlib utils library",
   "version": "1.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.mjs",
@@ -18,7 +18,7 @@
     "publish": "pnpm publish"
   },
   "devDependencies": {
-    "@mylib/typescript-config": "workspace:*",
+    "@lmlib/typescript-config": "workspace:*",
     "rolldown": "catalog:build",
     "rolldown-plugin-dts": "catalog:build",
     "typescript": "catalog:types"

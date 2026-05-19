@@ -25,19 +25,19 @@ Install using a package manager:
 ::: code-group
 
 ```bash [npm]
-npm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+npm install @lmlib/ui @lmlib/utils @lmlib/hooks @lmlib/directives
 ```
 
 ```bash [yarn]
-yarn add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+yarn add @lmlib/ui @lmlib/utils @lmlib/hooks @lmlib/directives
 ```
 
 ```bash [pnpm]
-pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+pnpm add @lmlib/ui @lmlib/utils @lmlib/hooks @lmlib/directives
 ```
 
 ```bash [bun]
-bun add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+bun add @lmlib/ui @lmlib/utils @lmlib/hooks @lmlib/directives
 ```
 
 :::
@@ -49,16 +49,16 @@ bun add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```ts
 // Global import
 import { createApp } from 'vue';
-import UI from '@mylib/ui';
-import '@mylib/ui/style.css';
+import UI from '@lmlib/ui';
+import '@lmlib/ui/style.css';
 const app = createApp(App);
 app.use(UI);
 // Additionally, add the following configuration to tsconfig.json for type hints:
-// "types": ["@mylib/ui/global.d.ts"]
+// "types": ["@lmlib/ui/global.d.ts"]
 
 // Import on demand
-import { Button } from '@mylib/ui';
-import '@mylib/ui/style.css';
+import { Button } from '@lmlib/ui';
+import '@lmlib/ui/style.css';
 const app = createApp(App);
 app.use(Button);
 ```
@@ -66,25 +66,25 @@ app.use(Button);
 ### Utility Functions
 
 ```ts
-import { isString } from '@mylib/utils';
+import { isString } from '@lmlib/utils';
 console.log(isString('hello')); // true
 ```
 
 ### Hooks
 
 ```ts
-import { useCounter } from '@mylib/hooks';
+import { useCounter } from '@lmlib/hooks';
 const { count, increment, decrement } = useCounter();
 ```
 
 ### Directives
 
 ```ts
-import { vFocus } from '@mylib/directives';
+import { vFocus } from '@lmlib/directives';
 // Global import
 app.directive('focus', vFocus);
 
 // Import on demand
-import { vFocus } from '@mylib/directives';
+import { vFocus } from '@lmlib/directives';
 app.directive('focus', vFocus);
 ```

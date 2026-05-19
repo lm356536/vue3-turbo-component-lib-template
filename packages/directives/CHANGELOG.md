@@ -1,4 +1,4 @@
-# @mylib/directives
+# @lmlib/directives
 
 ## 1.0.0
 

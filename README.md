@@ -42,7 +42,7 @@ A modern component library template based on `Turborepo + Vue 3.5 + TypeScript`,
 - 🎯 **Full Type Support** - Comprehensive TypeScript type definitions for better DX
 - 🛠️ **Rich Toolset** - Built-in common Hooks, utility functions and directives
 - 🔄 **HMR Support** - Real-time preview during development, boosts productivity
-- 🔧 **One-click Renaming** - Quickly replace @mylib with your custom package name
+- 🔧 **One-click Renaming** - Quickly replace @lmlib with your custom package name
 - ⚡️ **Fast Library Builds** - Uses Rolldown for base packages and tsdown for the UI package
 - 🧩 **Optional Aggregate Build** - Keeps `build:gulp` for collecting all library outputs under root `dist`
 - 🧪 **Modern Playground Dependency** - Uses antdv-next and @antdv-next/icons in playground
@@ -83,8 +83,8 @@ pnpm build
 ### Install the component library in your project
 
 ```bash
-# Replace @mylib with your own package name
-pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+# Replace @lmlib with your own package name
+pnpm add @lmlib/ui @lmlib/utils @lmlib/hooks @lmlib/directives
 
 # Example installation
 pnpm add @hmflib/ui @hmflib/utils @hmflib/hooks @hmflib/directives
@@ -190,11 +190,11 @@ pnpm has the following advantages over npm and yarn:
 
 ### 2. How to customize package names?
 
-The project uses `@mylib` as the default package name prefix. You can replace it with one command:
+The project uses `@lmlib` as the default package name prefix. You can replace it with one command:
 
 ```bash
-# Replace @mylib with your custom package name, e.g. @yourname
-pnpm rename-pkg "@mylib" "@yourname"
+# Replace @lmlib with your custom package name, e.g. @yourname
+pnpm rename-pkg "@lmlib" "@yourname"
 ```
 
 ### 3. How to generate new components?

@@ -1,5 +1,5 @@
 {
-  "name": "@mylib/build",
+  "name": "@lmlib/build",
   "description": "Gulp aggregate build config",
   "version": "1.0.0",
   "private": true,

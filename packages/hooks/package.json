@@ -1,7 +1,7 @@
 {
-  "name": "@mylib/hooks",
+  "name": "@lmlib/hooks",
   "version": "1.0.0",
-  "description": "@mylib hooks library",
+  "description": "@lmlib hooks library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.mjs",
   "types": "dist/types/index.d.ts",
@@ -18,7 +18,7 @@
     "publish": "pnpm publish"
   },
   "devDependencies": {
-    "@mylib/typescript-config": "workspace:*",
+    "@lmlib/typescript-config": "workspace:*",
     "rolldown": "catalog:build",
     "rolldown-plugin-dts": "catalog:build",
     "typescript": "catalog:types",

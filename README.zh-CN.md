@@ -42,7 +42,7 @@
 - 🎯 **完整类型提示** - 全面的 TypeScript 类型定义，提升开发体验
 - 🛠️ **丰富工具集** - 内置常用 Hooks、工具函数和指令
 - 🔄 **热更新支持** - 开发时实时预览，提升开发效率
-- 🔧 **一键重命名** - 快速将 @mylib 替换为你的自定义包名
+- 🔧 **一键重命名** - 快速将 @lmlib 替换为你的自定义包名
 - ⚡️ **快速库构建** - 使用 Rolldown 构建基础包，使用 tsdown 构建 UI 包
 - 🧩 **可选聚合构建** - 保留 `build:gulp`，可将所有库包统一输出到根目录 `dist`
 - 🧪 **新版演练场依赖** - playground 使用 antdv-next 和 @antdv-next/icons
@@ -83,8 +83,8 @@ pnpm build
 ### 安装组件库到你的项目
 
 ```bash
-# 将 @mylib 替换为你自己的包名
-pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+# 将 @lmlib 替换为你自己的包名
+pnpm add @lmlib/ui @lmlib/utils @lmlib/hooks @lmlib/directives
 
 # 示例安装
 pnpm add @hmflib/ui @hmflib/utils @hmflib/hooks @hmflib/directives
@@ -190,11 +190,11 @@ pnpm 相比 npm 和 yarn 有以下优势：
 
 ### 2. 如何自定义包名？
 
-项目默认使用 `@mylib` 作为包名前缀，你可以通过以下命令一键替换：
+项目默认使用 `@lmlib` 作为包名前缀，你可以通过以下命令一键替换：
 
 ```bash
-# 将 @mylib 替换为你的自定义包名，例如 @yourname
-pnpm rename-pkg "@mylib" "@yourname"
+# 将 @lmlib 替换为你的自定义包名，例如 @yourname
+pnpm rename-pkg "@lmlib" "@yourname"
 ```
 
 ### 3. 如何生成新组件？

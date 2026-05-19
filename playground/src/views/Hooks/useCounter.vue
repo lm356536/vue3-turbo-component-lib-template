@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { useCounter } from '@mylib/hooks';
+import { useCounter } from '@lmlib/hooks';
 
 const { count, increment, decrement } = useCounter();
 </script>

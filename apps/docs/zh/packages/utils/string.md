@@ -5,7 +5,7 @@
 > 判断是否为字符串。
 
 ```ts
-import { isString } from '@mylib/utils';
+import { isString } from '@lmlib/utils';
 
 isString('hello'); // true
 isString(123); // false

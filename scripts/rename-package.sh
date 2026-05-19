@@ -33,6 +33,6 @@ find . -type f \
     -not -path "*/.turbo/*" \
     -not -path "*/.cache/*" \
     \( -name "*.json" -o -name "*.ts" -o -name "*.js" -o -name "*.vue" -o -name "*.md" -o -name "*.mjs" \) \
-    -exec sed -i'' "s/$OLD_NAME_ESCAPED/$NEW_NAME_ESCAPED/g" {} +
+    -exec sed -i '' "s/$OLD_NAME_ESCAPED/$NEW_NAME_ESCAPED/g" {} +
 
 echo "Done! Please review the changes and run 'pnpm install' to update lock file"

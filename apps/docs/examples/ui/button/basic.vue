@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-// import { VButton } from '@mylib/ui';
+// import { VButton } from '@lmlib/ui';
 </script>
 
 <style scoped>

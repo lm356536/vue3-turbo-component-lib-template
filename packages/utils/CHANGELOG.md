@@ -1,4 +1,4 @@
-# @mylib/utils
+# @lmlib/utils
 
 ## 1.0.0
 

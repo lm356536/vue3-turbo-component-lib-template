@@ -1,4 +1,4 @@
-import { chunk, unique } from '@mylib/utils';
+import { chunk, unique } from '@lmlib/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('array工具', () => {

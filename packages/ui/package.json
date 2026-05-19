@@ -1,6 +1,6 @@
 {
-  "name": "@mylib/ui",
-  "description": "@mylib ui library",
+  "name": "@lmlib/ui",
+  "description": "@lmlib ui library",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/cjs/index.js",
@@ -33,7 +33,7 @@
     "publish": "pnpm publish"
   },
   "devDependencies": {
-    "@mylib/typescript-config": "workspace:*",
+    "@lmlib/typescript-config": "workspace:*",
     "@tsdown/css": "catalog:build",
     "@types/node": "catalog:types",
     "@vitejs/plugin-vue": "catalog:build",

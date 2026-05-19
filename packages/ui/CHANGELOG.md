@@ -1,4 +1,4 @@
-# @mylib/ui
+# @lmlib/ui
 
 ## 1.0.0
 

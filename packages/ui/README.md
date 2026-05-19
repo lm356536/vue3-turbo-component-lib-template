@@ -1,4 +1,4 @@
-# @mylib/ui
+# @lmlib/ui
 
 Vue 3 组件库，基于 Vue 3 + TypeScript 构建的现代化组件库。
 
@@ -13,11 +13,11 @@ Vue 3 组件库，基于 Vue 3 + TypeScript 构建的现代化组件库。
 ## 安装
 
 ```bash
-npm install @mylib/ui
+npm install @lmlib/ui
 
-yarn add @mylib/ui
+yarn add @lmlib/ui
 
-pnpm add @mylib/ui
+pnpm add @lmlib/ui
 ```
 
 ## 快速开始
@@ -29,8 +29,8 @@ pnpm add @mylib/ui
 import { createApp } from 'vue';
 import App from './App.vue';
 
-import VUI from '@mylib/ui';
-import '@mylib/ui/style.css';
+import VUI from '@lmlib/ui';
+import '@lmlib/ui/style.css';
 
 const app = createApp(App);
 app.use(VUI);
@@ -44,8 +44,8 @@ app.mount('#app');
 import { createApp } from 'vue';
 import App from './App.vue';
 
-import { Button } from '@mylib/ui';
-import '@mylib/ui/style.css';
+import { Button } from '@lmlib/ui';
+import '@lmlib/ui/style.css';
 
 const app = createApp(App);
 app.use(Button);
@@ -68,7 +68,7 @@ app.mount('#app');
 </template>
 
 <script setup lang="ts">
-import { VButton, VDialog } from '@mylib/ui';
+import { VButton, VDialog } from '@lmlib/ui';
 import { ref } from 'vue';
 const open = ref(false);
 </script>

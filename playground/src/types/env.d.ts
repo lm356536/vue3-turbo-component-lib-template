@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 /// <reference types="antdv-next/global.d.ts" />
-/// <reference types="@mylib/ui/global.d.ts" />
+/// <reference types="@lmlib/ui/global.d.ts" />
 
 declare module '*.vue' {
   import type { DefineComponent } from 'vue';
@@ -9,5 +9,5 @@ declare module '*.vue' {
 }
 
 declare module 'mylib/ui' {
-  export * from '@mylib/ui';
+  export * from '@lmlib/ui';
 }

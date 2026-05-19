@@ -1,5 +1,5 @@
 {
-  "name": "@mylib/playground",
+  "name": "@lmlib/playground",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "@antdv-next/icons": "catalog:frontend",
-    "@mylib/directives": "workspace:*",
-    "@mylib/hooks": "workspace:*",
-    "@mylib/typescript-config": "workspace:*",
-    "@mylib/ui": "workspace:*",
-    "@mylib/utils": "workspace:*",
+    "@lmlib/directives": "workspace:*",
+    "@lmlib/hooks": "workspace:*",
+    "@lmlib/typescript-config": "workspace:*",
+    "@lmlib/ui": "workspace:*",
+    "@lmlib/utils": "workspace:*",
     "antdv-next": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend"

@@ -1,1 +1,1 @@
-export { default } from '@mylib/prettier-config';
+export { default } from '@lmlib/prettier-config';

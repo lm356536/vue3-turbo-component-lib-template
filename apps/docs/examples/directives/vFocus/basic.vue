@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { vFocus } from '@mylib/directives';
+import { vFocus } from '@lmlib/directives';
 </script>
 
 <style scoped>

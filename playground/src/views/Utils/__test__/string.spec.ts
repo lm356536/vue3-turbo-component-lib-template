@@ -1,4 +1,4 @@
-import { camelToKebab, capitalize, isString } from '@mylib/utils';
+import { camelToKebab, capitalize, isString } from '@lmlib/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('string工具', () => {

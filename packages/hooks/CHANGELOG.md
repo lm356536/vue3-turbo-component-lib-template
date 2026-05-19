@@ -1,4 +1,4 @@
-# @mylib/hooks
+# @lmlib/hooks
 
 ## 1.0.0
 

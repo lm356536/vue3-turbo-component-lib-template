@@ -1,6 +1,6 @@
 import DefaultTheme from 'vitepress/theme';
 // 引入UI库的样式
-import '@mylib/ui/style.css';
+import '@lmlib/ui/style.css';
 import { useGlobalComp } from '../utils/useGlobalComp';
 // 自定义样式重载
 import './styles/global.css';
