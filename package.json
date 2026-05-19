@@ -90,5 +90,8 @@
         "search-insights"
       ]
     }
+  },
+  "volta": {
+    "node": "24.15.0"
   }
 }
